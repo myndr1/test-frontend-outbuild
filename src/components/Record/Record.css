@@ -1,0 +1,60 @@
+.record-container {
+    display: flex;                 
+    justify-content: center;       
+    align-items: center;           
+    background-color: green;       
+    margin: 10px;
+    height: 60px;
+}
+
+.record-container .icon {
+    font-size: 30px;
+    color: black;
+    margin-right: 10px;
+}
+
+.record-container .attributes {
+    display: flex;                 
+    justify-content: center; 
+    align-items: center;         
+    background: red;            
+    height: 100%;
+    width: 85%;
+    padding: 5px;
+}
+
+.record-container .id {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background: salmon;            
+    width: 5%;
+    height: 100%;
+}
+
+
+.record-container .text {
+    flex: 1;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background: blue;            
+    margin: 0 5px; 
+    max-width: 100%; 
+    height: 100%;       
+}
+
+.record-container h1 {
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.record-container .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: yellow;
+    margin-left: 20px;
+}
