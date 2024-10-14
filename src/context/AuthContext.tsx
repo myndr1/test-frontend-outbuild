@@ -27,7 +27,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         resolve();
       } else {
         setIsAuthenticated(false);
-        reject('Credenciales inválidas');
+        reject('Invalid credentials');
       }
     });
   };
