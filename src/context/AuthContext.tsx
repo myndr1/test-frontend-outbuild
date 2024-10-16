@@ -1,17 +1,7 @@
 import React, { createContext, useContext, useState, ReactNode } from "react";
-
-interface AuthContextProps {
-  isAuthenticated: boolean;
-  login: (email: string, password: string) => Promise<void>;
-  logout: () => void;
-}
+import { AuthContextProps } from "../interfaces/interfaces";
 
 const AuthContext = createContext<AuthContextProps | undefined>(undefined);
-
-const validCredentials = {
-  email: "prologin@prologin.com",
-  password: "ProLogin123456",
-};
 
 export const AuthProvider: React.FC<{ children: ReactNode }> = ({
   children,
@@ -23,10 +13,10 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
 
   const login = async (email: string, password: string): Promise<void> => {
     return new Promise((resolve, reject) => {
-      if (
-        email === validCredentials.email &&
-        password === validCredentials.password
-      ) {
+      const validEmail = process.env.REACT_APP_VALID_EMAIL;
+      const validPassword = process.env.REACT_APP_VALID_PASSWORD;
+      console.log(validEmail, validPassword);
+      if (email === validEmail && password === validPassword) {
         setIsAuthenticated(true);
         localStorage.setItem("isAuthenticated", "true");
         resolve();
@@ -52,7 +42,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
 export const useAuth = (): AuthContextProps => {
   const context = useContext(AuthContext);
   if (!context) {
-    throw new Error("useAuth debe ser usado dentro de un AuthProvider");
+    throw new Error("useAuth must be used within an AuthProvider");
   }
   return context;
 };
