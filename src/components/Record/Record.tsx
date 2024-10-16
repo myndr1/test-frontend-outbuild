@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import "./Record.css";
-import { CommentProps } from "../../interfaces/interfaces";
-import { FaEye } from "react-icons/fa";
-import Modal from "../Modal/Modal";
+import React, { useState } from 'react';
+import './Record.css';
+import { CommentProps } from '../../interfaces/interfaces';
+import { FaEye } from 'react-icons/fa';
+import Modal from '../Modal/Modal';
 
 const Record: React.FC<CommentProps> = ({ comment }) => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);

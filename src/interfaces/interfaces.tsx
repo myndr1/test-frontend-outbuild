@@ -1,3 +1,8 @@
+export interface Credentials {
+  email: string;
+  password: string;
+}
+
 export interface Comment {
   postId: number;
   id: number;
@@ -12,8 +17,12 @@ export interface CommentProps {
 
 export interface AuthContextProps {
   isAuthenticated: boolean;
-  login: (email: string, password: string) => Promise<void>;
+  login: (email: string, password: string) => void;
   logout: () => void;
+}
+
+export interface ErrorProps {
+  error: string | undefined;
 }
 
 export interface ModalProps {

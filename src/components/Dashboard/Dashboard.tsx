@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import "./Dashboard.css";
-import Record from "../Record/Record";
-import { Comment } from "../../interfaces/interfaces";
-import { useAuth } from "../../context/AuthContext";
-import { fetchComments } from "../../services/commentsService";
+import React, { useEffect, useState } from 'react';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import './Dashboard.css';
+import Record from '../Record/Record';
+import { Comment } from '../../interfaces/interfaces';
+import { useAuth } from '../../context/AuthContext';
+import { fetchComments } from '../../services/commentsService';
 
-const Dashboard = () => {
+const Dashboard: React.FC = () => {
   const [comments, setComments] = useState<Comment[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
