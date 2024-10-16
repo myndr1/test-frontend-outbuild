@@ -1,52 +1,47 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "./Login.css";
-import { FaUser, FaEye, FaEyeSlash } from "react-icons/fa";
-import { FaCircleExclamation } from "react-icons/fa6";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { useAuth } from "../../context/AuthContext";
-import useValidation from "../../hooks/useValidation";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { FaUser, FaEye, FaEyeSlash } from 'react-icons/fa';
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
+import './Login.css';
+
+import { Credentials } from '../../interfaces/interfaces';
+import { useAuth } from '../../context/AuthContext';
+import useValidation from '../../hooks/useValidation';
+import Error from './Error';
 
 const Login = () => {
-  const [showPassword, setShowPassword] = useState(false);
-  const [credentials, setCredentials] = useState({ email: "", password: "" });
+  const [showPassword, setShowPassword] = useState<boolean>(false);
+  const [credentials, setCredentials] = useState<Credentials>({ email: '', password: '' });
   const { inputErrors, validateInputs } = useValidation();
   const { login } = useAuth();
   const navigate = useNavigate();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCredentials({
-      ...credentials,
+    setCredentials((prev) => ({
+      ...prev,
       [e.target.name]: e.target.value,
-    });
+    }));
   };
 
   const togglePasswordVisibility = () => {
     setShowPassword((prev) => !prev);
   };
 
-  const renderError = (error: string | undefined) =>
-    error ? (
-      <div className="error-container">
-        <FaCircleExclamation className="icon" />
-        <text>{error}</text>
-      </div>
-    ) : (
-      <div className="error-container"> </div>
-    );
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (validateInputs(credentials.email, credentials.password)) {
-      try {
-        await login(credentials.email, credentials.password);
-        toast.success("¡Login successful!");
-        navigate("/dashboard");
-      } catch (error) {
-        toast.error(error as string);
-      }
+    if (!validateInputs(credentials.email, credentials.password)) {
+      return;
+    }
+
+    try {
+      login(credentials.email, credentials.password);
+      toast.success('¡Login successful!');
+      navigate('/dashboard');
+    } catch (error) {
+      toast.error((error as Error).message);
     }
   };
 
@@ -56,7 +51,7 @@ const Login = () => {
         <h1>ProLogin</h1>
         <div className="input-box">
           <input
-            className={inputErrors.email ? "error" : ""}
+            className={inputErrors.email ? 'error' : ''}
             type="text"
             placeholder="Email"
             value={credentials.email}
@@ -66,12 +61,12 @@ const Login = () => {
           />
           <FaUser className="icon" />
         </div>
-        {renderError(inputErrors.email)}
+        <Error error={inputErrors.email} />
 
         <div className="input-box">
           <input
-            className={inputErrors.password ? "error" : ""}
-            type={showPassword ? "text" : "password"}
+            className={inputErrors.password ? 'error' : ''}
+            type={showPassword ? 'text' : 'password'}
             placeholder="Password"
             value={credentials.password}
             onChange={handleChange}
@@ -82,7 +77,7 @@ const Login = () => {
             {showPassword ? <FaEyeSlash /> : <FaEye />}
           </span>
         </div>
-        {renderError(inputErrors.password)}
+        <Error error={inputErrors.password} />
 
         <button type="submit"> Login </button>
       </form>
