@@ -8,13 +8,7 @@
     height: 60px;
     border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  /*   transition: opacity 0.3s ease;
-    opacity: 0.9; */
 }
-/* 
-.record-container:hover {
-    opacity: 1;
-} */
 
 .record-container .icon {
     font-size: 30px;
