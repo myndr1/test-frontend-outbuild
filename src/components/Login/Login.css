@@ -1,15 +1,17 @@
 .wrapper {
     width: 420px;
-    background: #74BDCB;
+    background: var(--color-primary);
     color: #fff;
     border-radius: 10px;
-    padding: 30px 40px
+    padding: 30px 40px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .wrapper h1 {
     font-size: 36px;
     text-align: center;
     margin-bottom: 50px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .wrapper .input-box {
@@ -35,7 +37,7 @@
 }
 
 .input-box input.error {
-    border-color: rgb(251, 75, 75); /* Rojo para error */
+    border-color: var(--color-error);
 }
 
 .input-box .icon {
@@ -52,14 +54,14 @@
 }
 
 .error-container text {
-    color: black;
+    color: var(--color-black);
     font-size: 13px;
     font-weight: 500;
     margin-left: 5px;
 }
 
 .error-container .icon {
-    color: rgb(241, 46, 46);
+    color: var(--color-error);
     font-size: 13px;
     transform: translateY(2px);
 }

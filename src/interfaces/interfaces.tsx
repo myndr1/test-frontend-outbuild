@@ -9,3 +9,9 @@ export interface Comment {
 export interface CommentProps {
     comment: Comment; 
   }
+
+export interface ModalProps {
+    isOpen: boolean;
+    onClose: () => void;
+    children: React.ReactNode;
+}
