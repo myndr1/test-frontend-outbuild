@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FaUser, FaEye, FaEyeSlash } from 'react-icons/fa';
+import { MdOutlineEmail } from 'react-icons/md';
+import { HiOutlineLockClosed } from 'react-icons/hi2';
+import { IoEyeOffOutline, IoEyeOutline } from 'react-icons/io5';
 import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
@@ -50,32 +52,43 @@ const Login = () => {
       <form onSubmit={handleSubmit}>
         <h1>ProLogin</h1>
         <div className="input-box">
-          <input
-            className={inputErrors.email ? 'error' : ''}
-            type="text"
-            placeholder="Email"
-            value={credentials.email}
-            onChange={handleChange}
-            required
-            name="email"
-          />
-          <FaUser className="icon" />
+          <p>Email Address</p>
+          <div className="input-container">
+            <span className="icon">
+              <MdOutlineEmail />
+            </span>
+            <input
+              className={inputErrors.email ? 'error' : ''}
+              type="text"
+              placeholder="you@example.com"
+              value={credentials.email}
+              onChange={handleChange}
+              required
+              name="email"
+            />
+          </div>
         </div>
         <Error error={inputErrors.email} />
 
         <div className="input-box">
-          <input
-            className={inputErrors.password ? 'error' : ''}
-            type={showPassword ? 'text' : 'password'}
-            placeholder="Password"
-            value={credentials.password}
-            onChange={handleChange}
-            required
-            name="password"
-          />
-          <span className="icon" onClick={togglePasswordVisibility}>
-            {showPassword ? <FaEyeSlash /> : <FaEye />}
-          </span>
+          <p>Password</p>
+          <div className="input-container">
+            <span className="icon">
+              <HiOutlineLockClosed />
+            </span>
+            <input
+              className={inputErrors.password ? 'error' : ''}
+              type={showPassword ? 'text' : 'password'}
+              placeholder="Enter your password"
+              value={credentials.password}
+              onChange={handleChange}
+              required
+              name="password"
+            />
+            <span className="eye-icon" onClick={togglePasswordVisibility}>
+              {showPassword ? <IoEyeOffOutline /> : <IoEyeOutline />}
+            </span>
+          </div>
         </div>
         <Error error={inputErrors.password} />
 

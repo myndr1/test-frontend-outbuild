@@ -11,7 +11,7 @@ const validatePassword = (password: string) => {
   const hasLetter = /[a-zA-Z]/;
 
   if (password.length < minLength) {
-    return 'Password must be at least 6 characters long';
+    return 'Password must be at least 6 characters';
   }
   if (!hasNumber.test(password)) {
     return 'Password must contain at least one number';
