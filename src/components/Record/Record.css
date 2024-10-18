@@ -1,115 +1,84 @@
-.record-container {
-    display: flex;                 
-    justify-content: center;       
-    align-items: center;           
-    background-color: var(--color-secondary);       
-    margin: 10px;
-    margin-bottom: 18px;
-    height: 60px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+.record-id,
+.record-name,
+.record-email,
+.record-action {
+  color: #002D62;
+  font-size: 0.95em;
+  font-weight: 500;
+  height: 70px;
 }
 
-.record-container .icon {
-    font-size: 30px;
-    color: var(--color-black);
-    margin-right: 10px;
-    cursor: pointer;
+.record-id {
+  text-align: center;
+  width: 5%;
 }
 
-.record-container .attributes {
-    display: flex;                 
-    justify-content: center; 
-    align-items: center;                 
-    height: 100%;
-    width: 85%;
-    padding: 5px;
+.record-name {
+  text-align: start;
+  width: 50%;
 }
 
-.record-container .id {
-    display: flex;
-    justify-content: center; 
-    align-items: center;          
-    width:10%;
-    height: 100%;
-    margin-left: 10px;
-    transform: translateX(-20%);
+.record-email {
+  text-align: start;
+  width: 35%;
 }
 
-.record-container .id text {
-    color: var(--color-white);
-    font-size: 1em;
-    font-weight: 600;
-    text-align: center;
+.record-action {
+  text-align: center;
+  width: 10%;
 }
 
-
-.record-container .text {
-    flex: 1;
-    display: flex;
-    justify-content: center; 
-    align-items: center;       
-    margin: 0 5px; 
-    max-width: 100%; 
-    height: 100%;       
+.record-action .eye-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.5em;
+  padding: 5px 1px;
+  color: #002D62;
+  border-radius: 7px;
 }
 
-.record-container h1 {
-    color: rgb(70, 65, 65);
-    font-size: 14px;
-    font-weight: 600;
-    text-align: center;
+.record-action .eye-icon:hover {
+  color: #002D62;
+  background: #C1E8FF;
 }
 
-.record-container .icon-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 20px;
-}
-
-.record-container .icon-container .icon {
-    font-size: 27px;
-    color: var(--color-black);
-    cursor: pointer;
-}
-
-.record-container .icon-container .icon:hover {
-    color: var(--color-white);
-}
 
 .modal-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background: var(--color-secondary);
-    transform: translateY(-35%);
-    border-radius: 10px;
-    padding: 5px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 20px;
 }
 
 .modal-header h1 {
-    color: var(--color-white);
-    font-size: 20px;
-    font-weight: 600;
+  font-size: 1.5em;
+  color: #215896;
+  text-align: center;
 }
 
 .modal-body {
-    width: 100%; 
+  padding: 10px 0;
+}
+
+.modal-body .info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-bottom: 10px;
+  background: #F0F8FF;
+  padding: 4%;
 }
 
 .modal-body h1 {
-    text-align: left; 
-    margin: 10px 0;
-    font-size: 16px;
-    color: var(--color-title);
-    font-weight: 600;
+  font-size: 0.95em;
+  color: #215896;
+  padding-bottom: 3%
 }
 
 .modal-body p {
-    text-align: center;
-    font-size: 14px;
-    color: var(--color-text);
-    margin-bottom: 10px;
+  text-align: justify;
+  border-radius: 5px;
+  color: #333;
+  font-size: 0.9em;
+  color: #002D62;
 }

@@ -51,6 +51,7 @@ const Login = () => {
     <div className="wrapper">
       <form onSubmit={handleSubmit}>
         <h1>ProLogin</h1>
+        <text className="subtitle"> Please enter your credentials to access your account </text>
         <div className="input-box">
           <p>Email Address</p>
           <div className="input-container">

@@ -3,7 +3,7 @@ import { AuthContextProps } from '../interfaces/interfaces';
 
 const AuthContext = createContext<AuthContextProps | undefined>(undefined);
 const validEmail = 'prologin@prologin.com';
-const validPassword = 'prologin123456';
+const validPassword = 'ProLogin123456';
 
 export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(() => {

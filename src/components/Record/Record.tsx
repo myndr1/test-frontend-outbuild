@@ -16,37 +16,40 @@ const Record: React.FC<CommentProps> = ({ comment }) => {
   };
 
   return (
-    <div className="record-container">
-      <div className="attributes">
-        <div className="id">
-          <text> {comment.id} </text>
-        </div>
-        <div className="text">
-          <h1> {comment.name} </h1>
-        </div>
-        <div className="text">
-          <h1> {comment.email} </h1>
-        </div>
-      </div>
-      <div className="icon-container">
-        <FaEye className="icon" onClick={handleIconClick} />
-      </div>
+    <tr className="record-row">
+      <td className="record-id">{comment.id}</td>
+      <td className="record-name">{comment.name}</td>
+      <td className="record-email">{comment.email}</td>
+      <td className="record-action">
+        <span className="eye-icon" onClick={handleIconClick}>
+          <FaEye />
+        </span>
+      </td>
       <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
         <div className="modal-header">
-          <h1> {comment.id} </h1>
+          <h1>Comment Details</h1>
+          <button className="close-button" onClick={handleCloseModal}></button>
         </div>
         <div className="modal-body">
-          <h1>Name:</h1>
-          <p>{comment.name}</p>
-
-          <h1>Email:</h1>
-          <p>{comment.email}</p>
-
-          <h1>Body:</h1>
-          <p>{comment.body}</p>
+          <div className="info-container">
+            <h1>ID</h1>
+            <p>{comment.id}</p>
+          </div>
+          <div className="info-container">
+            <h1>Name</h1>
+            <p>{comment.name}</p>
+          </div>
+          <div className="info-container">
+            <h1>Email</h1>
+            <p>{comment.email}</p>
+          </div>
+          <div className="info-container">
+            <h1>Body</h1>
+            <p>{comment.body}</p>
+          </div>
         </div>
       </Modal>
-    </div>
+    </tr>
   );
 };
 

@@ -1,12 +1,18 @@
 :root {
     --color-primary: #74BDCB;
     --color-secondary: #ADD8E6;
-    --color-dark: #055C9D;
+    --color-blue: #3498DB;
+    --color-dark-blue: #2980B9;
     --color-light: #83bdd1;
     --color-neutral: white;
-    --color-error: rgb(241, 46, 46);
+    --color-error: #E74C3C;
     --color-black: black;
     --color-white: white;
     --color-title: #333;
     --color-text: #555;
+    --color-black-gray: #2C3E50;
+    --color-gray: #cfd3d6;
+    --color-input: #95A5A6;
+    --color-label: #34495E;
+    --color-light-gray: #7F8C8D
   }

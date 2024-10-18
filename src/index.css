@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 * {
   margin: 0;
@@ -7,17 +7,21 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif; 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
   min-height: 100vh;
-  background: url('assets/login-background.jpg');
+  background: linear-gradient(90deg, #F0F8FF, #E6F3F8);
   background-size: cover;
   background-position: center;
 }
+
+/* body::-webkit-scrollbar {
+  display: none; 
+} */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
