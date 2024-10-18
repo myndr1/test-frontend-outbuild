@@ -1,4 +1,3 @@
-/* Navbar */
 .navbar {
   position: fixed; 
   top: 0; 
@@ -55,7 +54,6 @@
   font-size: 1.2em;
 }
 
-/* TABLE */
 .records-container {
   display: flex;
   flex-direction: column;
@@ -158,7 +156,6 @@
   background: #002D62; 
 }
 
-/* Pagination Buttons */
 .buttons-container {
   display: flex;                 
   justify-content: center;        
