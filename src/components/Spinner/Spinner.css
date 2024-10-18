@@ -8,7 +8,7 @@
 .spinner {
   font-size: 3rem;
   animation: spin 1s linear infinite;
-  color: #002d62;
+  color: var(--color-ultra-dark-blue);
 }
 
 @keyframes spin {

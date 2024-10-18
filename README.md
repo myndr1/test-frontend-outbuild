@@ -18,6 +18,8 @@ In the project, you can run the following commands:
 
 ### `npm install`
 
+Install all the dependencies.
+
 ### `npm run start`
 
 Starts the application in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -33,6 +35,10 @@ Runs **ESLint** to check for any linting issues in the TypeScript files.
 ### `npm run lint:fix`
 
 Runs **ESLint** to automatically fix the issues that can be resolved.
+
+### `npm run format`
+
+Runs **Prettier** to automatically format the code in the project.
 
 ## Dependencies
 

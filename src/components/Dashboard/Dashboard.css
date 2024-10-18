@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background: #002d62;
+  background: var(--color-ultra-dark-blue);
   padding: 14px;
   margin: 0;
   z-index: 1000;
@@ -28,7 +28,7 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
-  background: #002d62;
+  background: var(--color-ultra-dark-blue);
   color: var(--color-white);
   border: none;
   border-radius: 5px;
@@ -40,8 +40,8 @@
 }
 
 .navbar .logout-button:hover {
-  background: #00468b;
-  color: #add8e6;
+  background: var(--color-primary);
+  color: var(--color-secondary);
 }
 
 .navbar .logout-button .logout-icon {
@@ -102,8 +102,8 @@
 }
 
 .records-table thead th {
-  background-color: #215896;
-  color: white;
+  background-color: var(--color-light-blue);
+  color: var(--color-white);
   padding: 12px;
   font-size: 1em;
   border-bottom: 1px solid #ddd;
@@ -149,12 +149,12 @@
 }
 
 .records-table tbody::-webkit-scrollbar-thumb {
-  background: #215896;
+  background: var(--color-light-blue);
   border-radius: 10px;
 }
 
 .records-table tbody::-webkit-scrollbar-thumb:hover {
-  background: #002d62;
+  background: var(--color-ultra-dark-blue);
 }
 
 .buttons-container {
@@ -176,7 +176,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: white;
+  background: var(--color-white);
   border: none;
   cursor: pointer;
   font-size: 1.6em;
@@ -189,7 +189,7 @@
 
 .arrow-button:hover:not(:disabled) {
   background: #c1e8ff;
-  color: #002d62;
+  color: var(--color-ultra-dark-blue);
 }
 
 .arrow-button:disabled {

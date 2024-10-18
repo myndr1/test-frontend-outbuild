@@ -2,7 +2,7 @@
 .record-name,
 .record-email,
 .record-action {
-  color: #002d62;
+  color: var(--color-ultra-dark-blue);
   font-size: 0.95em;
   font-weight: 500;
   height: 70px;
@@ -35,12 +35,12 @@
   cursor: pointer;
   font-size: 1.5em;
   padding: 5px 1px;
-  color: #002d62;
+  color: var(--color-ultra-dark-blue);
   border-radius: 7px;
 }
 
 .record-action .eye-icon:hover {
-  color: #002d62;
+  color: var(--color-ultra-dark-blue);
   background: #c1e8ff;
 }
 
@@ -51,7 +51,7 @@
 
 .modal-header h1 {
   font-size: 1.5em;
-  color: #215896;
+  color: var(--color-light-blue);
   text-align: center;
 }
 
@@ -70,14 +70,14 @@
 
 .modal-body h1 {
   font-size: 0.95em;
-  color: #215896;
+  color: var(--color-light-blue);
   padding-bottom: 3%;
 }
 
 .modal-body p {
   text-align: justify;
   border-radius: 5px;
-  color: #333;
+  color: var(--color-title);
   font-size: 0.9em;
-  color: #002d62;
+  color: var(--color-ultra-dark-blue);
 }
