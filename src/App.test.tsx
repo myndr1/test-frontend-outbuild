@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import '@testing-library/jest-dom'; 
+import '@testing-library/jest-dom';
 import App from './App';
 import { AuthProvider } from './context/AuthContext';
 import AppRoutes from './components/AppRoutes/AppRoutes';
@@ -14,7 +14,7 @@ jest.mock('./components/AppRoutes/AppRoutes', () => jest.fn(() => <div>AppRoutes
 describe('App Component', () => {
   it('should render without crashing', () => {
     const { getByText } = render(<App />);
-    expect(getByText('AppRoutes Component')).toBeInTheDocument(); 
+    expect(getByText('AppRoutes Component')).toBeInTheDocument();
   });
 
   it('should wrap AppRoutes with AuthProvider', () => {

@@ -35,9 +35,7 @@ const InvalidTestComponent: React.FC = () => {
 
   return (
     <div>
-      <div data-testid="auth-status">
-        {isAuthenticated ? 'Authenticated' : 'Not Authenticated'}
-      </div>
+      <div data-testid="auth-status">{isAuthenticated ? 'Authenticated' : 'Not Authenticated'}</div>
       <button onClick={handleLogin} data-testid="login-button">
         Login
       </button>

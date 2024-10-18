@@ -17,6 +17,7 @@ This is a frontend project built with React and TypeScript for the job applicati
 In the project, you can run the following commands:
 
 ### `npm install`
+
 ### `npm run start`
 
 Starts the application in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -60,23 +61,22 @@ The project uses **ESLint** with support for **TypeScript** and **React**, along
 
 The project follows a standard structure for React with TypeScript applications. Below is a description of the main structure:
 
-
 ```
-├── src/              
-│   ├── assets        
+├── src/
+│   ├── assets
 │   ├── components
 │   ├── comtext
 │   ├── hooks
 │   ├── interface
 │   ├── services
-│   ├── App.tsx         
-│   └── ...            
-├── .eslintignore        
-├── .eslintrc.json      
-├── .gitignore           
-├── .prettierrc           
-├── package.json     
-├── package-lock.json     
-├── tsconfig.json        
-├── README.md          
+│   ├── App.tsx
+│   └── ...
+├── .eslintignore
+├── .eslintrc.json
+├── .gitignore
+├── .prettierrc
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+├── README.md
 ```

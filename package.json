@@ -22,7 +22,8 @@
     "test": "jest",
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.{ts,tsx}",
-    "lint:fix": "eslint src/**/*.{ts,tsx} --fix"
+    "lint:fix": "eslint src/**/*.{ts,tsx} --fix",
+    "format": "prettier --write ."
   },
   "eslintConfig": {
     "extends": [

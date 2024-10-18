@@ -1,24 +1,24 @@
 .navbar {
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-  right: 0; 
-  display: flex;                 
-  justify-content: space-between;        
-  align-items: center;    
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  background: #002D62;
+  background: #002d62;
   padding: 14px;
   margin: 0;
-  z-index: 1000; 
+  z-index: 1000;
 }
 
 .navbar h1 {
   display: flex;
   justify-content: flex-start;
-  flex-grow: 1;                   
+  flex-grow: 1;
   color: var(--color-white);
-  font-size: 1.6em;      
+  font-size: 1.6em;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   margin-left: 17%;
 }
@@ -28,18 +28,20 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
-  background: #002D62;
+  background: #002d62;
   color: var(--color-white);
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
   margin-right: 17%;
 }
 
 .navbar .logout-button:hover {
-  background: #00468B;
-  color: #ADD8E6;
+  background: #00468b;
+  color: #add8e6;
 }
 
 .navbar .logout-button .logout-icon {
@@ -65,7 +67,7 @@
 }
 
 .records-container::-webkit-scrollbar {
-  display:none;
+  display: none;
 }
 
 .records-table {
@@ -79,23 +81,23 @@
 
 .records-table thead {
   display: table;
-  width: 100%; 
-  table-layout: fixed; 
+  width: 100%;
+  table-layout: fixed;
 }
 
 .records-table tbody {
-  display: block; 
+  display: block;
   max-height: 700px;
-  overflow-y: auto; 
+  overflow-y: auto;
 }
 
 .records-table tbody tr {
-  display: table; 
+  display: table;
   width: 100%;
 }
 
 .records-table thead tr {
-  display: table; 
+  display: table;
   width: 100%;
 }
 
@@ -131,15 +133,15 @@
 }
 
 .records-table tbody tr:nth-child(odd) {
-  background-color: var(--color-white); 
+  background-color: var(--color-white);
 }
 
 .records-table tbody tr:nth-child(even) {
-  background-color: #F0F8FF; 
+  background-color: #f0f8ff;
 }
 
 .records-table tbody::-webkit-scrollbar {
-  width: 5px; 
+  width: 5px;
 }
 
 .records-table tbody::-webkit-scrollbar-track {
@@ -147,26 +149,26 @@
 }
 
 .records-table tbody::-webkit-scrollbar-thumb {
-  background: #215896; 
-  border-radius: 10px; 
+  background: #215896;
+  border-radius: 10px;
 }
 
 .records-table tbody::-webkit-scrollbar-thumb:hover {
-  background: #002D62; 
+  background: #002d62;
 }
 
 .buttons-container {
-  display: flex;                 
-  justify-content: center;        
-  align-items: center;   
-  width: 100%; 
-  background: #E6F3FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: #e6f3ff;
   padding: 1rem;
 }
 
 .buttons-container .pages {
   margin-inline: 33%;
-  color: #1A5F7A;
+  color: #1a5f7a;
   font-size: 0.9rem;
 }
 
@@ -181,20 +183,20 @@
   width: 10%;
   padding: 0.5rem 2rem;
   border-radius: 7px;
-  color: #1A5F7A;
+  color: #1a5f7a;
   border: var(--color-secondary) 1px solid;
 }
 
 .arrow-button:hover:not(:disabled) {
-  background: #C1E8FF;
-  color: #002D62;
+  background: #c1e8ff;
+  color: #002d62;
 }
 
 .arrow-button:disabled {
-  background: #f0f0f0; 
-  color: #999; 
-  border: var(--color-gray) 1px solid; 
-  cursor: not-allowed; 
+  background: #f0f0f0;
+  color: #999;
+  border: var(--color-gray) 1px solid;
+  cursor: not-allowed;
 }
 
 .arrow-button span {
@@ -205,7 +207,7 @@
 }
 
 .arrow-button span:first-child {
-  margin-right: 1rem; 
+  margin-right: 1rem;
 }
 
 .arrow-button span:last-child {
