@@ -21,9 +21,9 @@ In the project, you can run the following commands:
 
 Starts the application in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-<!-- ### `npm test`
+### `npm test`
 
-Launches the test runner using **Jest** and **Testing Library**. -->
+Launches the test runner using **Jest** and **Testing Library**.
 
 ### `npm run lint`
 

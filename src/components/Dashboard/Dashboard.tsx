@@ -30,10 +30,6 @@ const Dashboard: React.FC = () => {
     loadComments();
   }, [page]);
 
-  useEffect(() => {
-    console.log(`Current page: ${page}`);
-  }, [page]);
-
   if (loading) {
     return <Spinner />;
   }

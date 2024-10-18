@@ -60,7 +60,7 @@
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  margin-top: 6rem; 
+  margin-top: 6rem;
   overflow: hidden;
 }
 
@@ -128,7 +128,6 @@
 
 .records-table tbody td {
   padding: 12px;
-  text-align: left;
 }
 
 .records-table tbody tr:nth-child(odd) {
