@@ -1,46 +1,88 @@
-# Getting Started with Create React App
+# test-frontend-outbuild
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+
+This is a frontend project built with React and TypeScript for the job application "Front-end with Experience in Real-Time Collaboration" from Outbuild. The application includes login functionality, credential validation, pagination for the data displayed on the dashboard, and routing. It adheres to clean code principles throughout the project. All the requested features were implemented, including the bonus points.
+
+## Main Technologies
+
+- **React**: ^18.3.1
+- **TypeScript**: ^4.9.5
+- **React Router DOM**: ^6.27.0
+- **React Toastify**: ^10.0.6
+- **React Icons**: ^5.3.0
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project, you can run the following commands:
 
-### `npm start`
+### `npm install`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Install all the dependencies.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### `npm run start`
+
+Starts the application in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner using **Jest** and **Testing Library**.
 
-### `npm run build`
+### `npm run lint`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Runs **ESLint** to check for any linting issues in the TypeScript files.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `npm run lint:fix`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Runs **ESLint** to automatically fix the issues that can be resolved.
 
-### `npm run eject`
+### `npm run format`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Runs **Prettier** to automatically format the code in the project.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Dependencies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Production
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- **React**: ^18.3.1
+- **React DOM**: ^18.3.1
+- **React Router DOM**: ^6.27.0
+- **React Toastify**: ^10.0.6
+- **React Icons**: ^5.3.0
 
-## Learn More
+### Development
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **React**: ^18.3.1
+- **TypeScript**: ^4.9.5
+- **ESLint**: ^8.57.1
+- **Prettier**: ^3.3.3
+- **Jest**: For unit testing.
+- **Testing Library**: For component testing.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Linting and Formatting Configuration
+
+The project uses **ESLint** with support for **TypeScript** and **React**, along with **Prettier** for code formatting.
+
+## Project Structure
+
+The project follows a standard structure for React with TypeScript applications. Below is a description of the main structure:
+
+```
+├── src/
+│   ├── assets
+│   ├── components
+│   ├── comtext
+│   ├── hooks
+│   ├── interface
+│   ├── services
+│   ├── App.tsx
+│   └── ...
+├── .eslintignore
+├── .eslintrc.json
+├── .gitignore
+├── .prettierrc
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+├── README.md
+```

@@ -1,0 +1,83 @@
+.record-id,
+.record-name,
+.record-email,
+.record-action {
+  color: var(--color-ultra-dark-blue);
+  font-size: 0.95em;
+  font-weight: 500;
+  height: 70px;
+}
+
+.record-id {
+  text-align: center;
+  width: 5%;
+}
+
+.record-name {
+  text-align: start;
+  width: 50%;
+}
+
+.record-email {
+  text-align: start;
+  width: 35%;
+}
+
+.record-action {
+  text-align: center;
+  width: 10%;
+}
+
+.record-action .eye-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.5em;
+  padding: 5px 1px;
+  color: var(--color-ultra-dark-blue);
+  border-radius: 7px;
+}
+
+.record-action .eye-icon:hover {
+  color: var(--color-ultra-dark-blue);
+  background: #c1e8ff;
+}
+
+.modal-header {
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.modal-header h1 {
+  font-size: 1.5em;
+  color: var(--color-light-blue);
+  text-align: center;
+}
+
+.modal-body {
+  padding: 10px 0;
+}
+
+.modal-body .info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-bottom: 10px;
+  background: #f0f8ff;
+  padding: 4%;
+}
+
+.modal-body h1 {
+  font-size: 0.95em;
+  color: var(--color-light-blue);
+  padding-bottom: 3%;
+}
+
+.modal-body p {
+  text-align: justify;
+  border-radius: 5px;
+  color: var(--color-title);
+  font-size: 0.9em;
+  color: var(--color-ultra-dark-blue);
+}
